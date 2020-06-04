@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html en='5'>
+<head>
+    <!---Links-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="stylesheet.css" rel="stylesheet">
+ <title>Quiz Time</title>
+</head>
+<body>
+    <!--Questions-->
+    <input class="choices" type="button" name="question1" value="0">
+
+
+
+    <!--quiz container-->
+    <div class="container">
+      <h1>My Cool Quiz</h1>
+       <!--Question insert-->   
+        <div id="container-question" class="hide">
+     <div id="questionTime"></div>  
+    <div id="answer-btn" class="btn-grid">
+    <!--buttons-->
+    <hr style="margin-top: 120px">
+    <br>
+    <button id="btn0" class="btn">exanmpleha<span id="choice0"></span></button>
+    <button id="btn1" class="btn">exampleha<span id="choice1"></span></button>
+    <button id="btn2" class="btn">exampleha<span id="choice2"></span></button>
+    <button id="btn3" class="btn">exampleha<span id="choice3"></span></button>
+  </div> 
+  </div>
+    <!--control buttons-->
+    <div class="controls">
+      <button id="start-btn" class="start-btn btn">Lets Begin!</button>
+      <button id="next-btn" class="next-btn btn hide">Next</button>
+    </div>
+    </div>
+    <script src="questions.js"></script>
+</body>
+</html>

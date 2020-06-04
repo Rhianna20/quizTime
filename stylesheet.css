@@ -1,0 +1,60 @@
+*,*::before, *::after{
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+
+body {
+    --hue: var(--hue-neutral);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    padding: 0;
+    background-color: hsl(--hue), 100, 20%;
+    }
+body.correct{
+    --hue: var(--hue-correct);
+}
+body.wrong{
+    --hue: var(--hue-wrong);
+}
+.container{
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 0 8px 2px;
+}
+.myQuiz{
+    background-color: palevioletred;
+    color: purple;
+}
+
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#btn,#btn0, #btn1, #btn2, #btn3{
+    -hue: var(--hue-neutral);
+    color: purple;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+}
+
+#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover{
+    cursor: pointer;
+    background-color: rgb(209, 4, 250);
+
+}
+#btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus{
+    outline: 0em;
+}
