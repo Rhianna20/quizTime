@@ -1,34 +1,38 @@
 const startButton = document.getElementById('startbtn')
 const questionCElement = document.getElementById('container-question')
 const questionBlock = document.getElementById('question');
-const answerBlock = document.getElementById('answwer-btn');
-const nextButton = document.getElementById('next-btn');
+var answerBlock = document.getElementById('answwer-btn');
+var nextButton = document.getElementById('next-btn');
 
 let shuffleQuestions, questionIndex;
 
 startButton.addEventListener('click', startQuiz);
 
-
-
 function startQuiz(){
     console.log('The quiz has begun!')
     startButton.classList.add('hide')
-    shuffleQuestions = question.sort(() => Math.random() - .2)
+    shuffleQuestions = questions.sort(() => Math.random() - .2)
     questionIndex = 0
     questionCElement.classList.remove('hide')
     nextUp()
 }
 
 function nextUp(){
-    revealQuestion(shuffleQuestions[questionIndex])
-}
+    revealQuestion(shuffleQuestions[questionIndex])     
+    }
 
 
 
 
 function revealQuestion(question){
-questionBlock.innertext = question.question
-
+questionBlock.innerHTML = question.question
+question.answer.forEach(answer => {
+    const button = document.createElement('button')
+    button.innerHTML = answer.text
+    button.classList.add('btn')
+}
+    
+);
 }
 function selectAnswer(){
 
@@ -36,7 +40,7 @@ function selectAnswer(){
 }
  
 
-const question = [
+const questions = [
     {question: 'What is Javascript used for?', answer: [
         {text: 'a', correct: true},
         {text: 'b', correct: false},
