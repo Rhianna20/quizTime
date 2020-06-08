@@ -2,6 +2,8 @@
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     color: rgb(209, 4, 250);
+    align-content: center;
+    align-items: ce;
 }
 
 body {
@@ -25,16 +27,23 @@ body.wrong{
 .container{
     width: 800px;
     max-width: 80%;
-    background-color: yellow;
-    border-radius: 8px;
+    height: 80%;
+    background-color: rgb(56, 202, 202);
+    border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 8px 2px;
 }
 .myQuiz{
     background-color: palevioletred;
-    color: purple;
+    color: yellow;
+    align-items: center;
+    
 }
 
+#quiztitle {
+    text-align: center;
+    align-content: center;
+}
 .btn-grid{
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -42,7 +51,7 @@ body.wrong{
     margin: 20px 0;
 }
 
-#btn,#btn0, #btn1, #btn2, #btn3{
+.button{
     -hue: var(--hue-neutral);
     color: purple;
     border-radius: 5px;
@@ -52,12 +61,89 @@ body.wrong{
     cursor: pointer;
 }
 
-#btn0:hover, #btn1:hover, #btn2:hover, #btn3:hover{
+:button:hover{
     cursor: pointer;
     background-color: rgb(209, 4, 250);
     cursor: pointer;
 
 }
-#btn0:focus, #btn1:focus, #btn2:focus, #btn3:focus{
+.button:focus{
     outline: 0em;
+}
+
+
+:root{
+    --hue-neutral: 200;
+    --hue-wrong: 0;
+    --hue-correct: 145;
+}
+
+body.correct {
+    --hue: var(--hue-correct);
+    color: green;
+    background-color: green;
+}
+
+body.wrong {
+    --hue: var(--hue-wrong);
+    color: red;
+    background-color: red;
+
+}
+
+#btn {
+    --hue: var(--hue-neutral);
+    border: 1pz solid hsl(--hue, 100%, 30%);
+    border-radius: 5px;
+    background-color: hsl(--hue) 100%, 30%;
+    padding: 5px 10px;
+    color: black;
+    outline: none;
+}
+#container-question{
+ min-height: 50px;
+ border-radius: 8px;
+ 
+}
+.btn.correct
+{
+    --hue: var(--hue-correct);
+    background-color: greenyellow;
+    color: black;
+}
+.btn.wrong
+{
+    background-color: red;
+    color: red;
+    --hue: var(--hue-wrong);
+}
+#startbtn, #nextbtn{
+    padding: 10px 20px;
+   font-weight: bold;
+    font-size: 1.5rem;  
+    background-color: rgb(32, 106, 204);
+    color: white;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hide {
+    display: none;
+}
+  p
+{
+   align-items: center;
+  justify-content: center;
+}
+button{
+    --hue: var(--hue-neutral);
+    border: 1pz solid hsl(--hue, 100%, 30%);
+    border-radius: 5px;
+    background-color: hsl(--hue) 100%, 30%;
+    padding: 5px 10px;
+    color: black;
+    outline: none;
 }

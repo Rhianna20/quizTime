@@ -13,18 +13,26 @@
 
     <!--quiz container-->
     <div class="container">
-      <h1>My Cool Quiz</h1>
+      <h1 id="quiztitle">My Cool Quiz</h1>
        <!--Question insert-->   
         <div id="container-question" class="hide">
-     <p id="question"></p>  
+     <p id="question"></p>
+     <p class="correct hide"></p>   
+     <p class="wrong hide"></p> 
+     
     <div id="answer-btn" class="btn-grid">
+      <div id="score" class="hide"></div>
     <!--buttons-->
     <div id="block">
-    
+    <button class="btn" class="hide"></button>
+    <button class="btn" class="hide"></button>
+    <button class="btn" class="hide"></button>
+    <button class="btn" class="hide"></button>
     </div>
     <br>
       </div> 
   </div>
+  <div id="results"></div>
     <!--control buttons-->
     <div class="controls">
       <button id="startbtn" class="start-btn btn">Lets Begin!</button>
