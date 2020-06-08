@@ -32,6 +32,8 @@ body.wrong{
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 8px 2px;
+    align-items: center;
+    align-content: center;
 }
 .myQuiz{
     background-color: palevioletred;
@@ -133,6 +135,8 @@ body.wrong {
 .hide {
     display: none;
 }
+
+
   p
 {
    align-items: center;

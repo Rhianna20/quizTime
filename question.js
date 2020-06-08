@@ -9,7 +9,7 @@ let score = 0;
 let shuffleQuestions, questionIndex;
 
 startButton.addEventListener('click', startQuiz);
-
+answerBlock.addEventListener('click', endOfQuiz)
 
 
 
@@ -18,13 +18,14 @@ function startQuiz()
     console.log('The quiz has begun!')
     startButton.classList.add('hide')
     nextButton.classList.add('hide')
-    shuffleQuestions = questions.sort(() => Math.random() - .2)
+    shuffleQuestions = questions.sort(() => Math.random() - .3)
     questionIndex = 0
     questionCElement.classList.remove('hide')
     nextUp()
+    endOfQuiz()
  }
     answerBlock.addEventListener('click', () => {
-    question.innerHTML
+ 
 })
     answerBlock.addEventListener('click', selectAnswer);
     nextButton.addEventListener('click',() => {
@@ -34,19 +35,18 @@ function startQuiz()
 
 
   function nextUp()
-{
+{   console.log('Question up, click answer')
     restart() 
     revealQuestion(shuffleQuestions[questionIndex])  
     questionCElement.classList.remove('hide')
 }
 
 function restart()
- {  
-    clearup(document.body)
+ {  clearup(document.body)
     nextButton.classList.add('hide')
     while (answerBlock.firstChild){
         answerBlock.removeChild(answerBlock.firstChild)
-   }
+    answerBlock.firstChild }
 }
 
 
@@ -58,7 +58,7 @@ function revealQuestion(question){
         button.classList.add('btn')
         if (answer.correct){
             button.dataset.correct = answer.correct
-        
+            
  }
         button.addEventListener('click', selectAnswer)
         answerBlock.appendChild(button)
@@ -77,7 +77,6 @@ resetit(button, button.dataset.correct)
 if (shuffleQuestions.length > questionIndex + 1)
 nextButton.classList.remove('hide')
 console.log('Answer Selected')
-
 }
 
 
@@ -85,11 +84,10 @@ console.log('Answer Selected')
 function resetit (element, correct){
     clearup(element)
     if (correct){
-
         element.classList.add('correct')
-      
+
     }
-    else if (answerBlock != true) {
+    else  {
         element.classList.add('wrong')
     }
 }
@@ -105,9 +103,7 @@ function endOfQuiz(shuffleQuestions){
         console.log('End of quiz! Woorayy!')
         nextButton.classList.remove('hide')
         questionBlock.innerHTML = "End of Quiz!"
-    } else if (buttonSelected) {
-        console.log('error')
-    }
+    } 
 }
 
 
