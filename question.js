@@ -6,7 +6,6 @@ const nextButton = document.getElementById('nextbtn');
 const button = document.getElementById('button');
 const answer = document.getElementById('answer');
 
-
 let shuffleQuestions, questionIndex;
 
 
@@ -27,7 +26,7 @@ function startQuiz()
     nextUp()
  }
     answerBlock.addEventListener('click', () => {
-    question.innerHTML = 'Answer Selected, NEXT!'
+    question.innerHTML = 'NEXT!'
 
 })
     answerBlock.addEventListener('click', selectAnswer);
@@ -106,25 +105,25 @@ var questions = [
     {question: 'What is Javascript used for?', answer: [
         {text: 'To style Web Page', correct: false},
         {text: 'frontend development framework for creting responsive web design', correct: false},
-        {text: 'Creates interactive effects within web browser', correct: true},
+        {text: 'to create interactive effects within web browser', correct: true},
         {text: 'A shape produced by a curve', correct: false}
     ]},  
         {question: 'What does HTML stand for', answer: [
         {text: 'HyperTxt Makeup Language', correct: false},
         {text: 'Hypertext Markup Language', correct: true},
-        {text: 'hypertext', correct: false},
-        {text: 'd', correct: false}
+        {text: 'hypertext Makeup Language', correct: false},
+        {text: 'HyperStyled Markup Language', correct: false}
     ]},  
     {question: 'What is CSS?', answer: [
-        {text: 'a', correct: false},
-        {text: 'bDDD', correct: false},
-        {text: 'cdeee', correct: false},
-        {text: 'truea', correct: true}
+        {text: 'Code Styling Sheet', correct: false},
+        {text: 'Codesending Styler Sheet', correct: false},
+        {text: 'Condesending Style Sheet', correct: false},
+        {text: 'Cascading Style Sheet', correct: true}
     ]},  
-    {question: 'What is a loop ?', answer: [
-        {text: 'a', correct: false},
-        {text: 'bDDD', correct: false},
-        {text: 'cdeee', correct: false},
-        {text: 'truea', correct: true}
+    {question: 'Which one is NOT a comparison operator?', answer: [
+        {text: '==', correct: false},
+        {text: '>', correct: false},
+        {text: '<', correct: false},
+        {text: '$', correct: true}
     ]}, 
         ]

@@ -1,9 +1,7 @@
 *,*::before, *::after{
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
-    color: rgb(209, 4, 250);
-    align-content: center;
-    align-items: ce;
+    color: rgb(32, 204, 190);; 
 }
 
 body {
@@ -27,63 +25,72 @@ body.wrong{
 .container{
     width: 800px;
     max-width: 80%;
-    height: 80%;
-    background-color: rgb(56, 202, 202);
+    height: 70%;
+    background-color: rgba(255, 251, 1, 0.685);
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 8px 2px;
     align-items: center;
     align-content: center;
 }
-.myQuiz{
-    background-color: palevioletred;
-    color: yellow;
-    align-items: center;
-    
-}
 
-#quiztitle {
+h1#quiztitle {
     text-align: center;
     align-content: center;
 }
+@keyframes slidein {
+    0% {
+        margin-left: 0%;
+    }
+    50% {
+        margin-left: 300px;
+    } 
+        100% {
+            margin-left: 0%
+        }
+    }
+
 .btn-grid{
     display: grid;
     grid-template-columns: repeat(2, auto);
     gap: 10px;
     margin: 20px 0;
+    color: rgb(209, 4, 250);
 }
 
-.button{
-    -hue: var(--hue-neutral);
-    color: purple;
-    border-radius: 5px;
+button{
+    --hue: var(--hue-neutral);
+    border: 1px solid hsl(--hue, 100%, 30%);
+    border-radius: 1px solid ;
     padding: 5px 10px;
-    color: black;
+    color:white;
     outline: none;
     cursor: pointer;
+    --hue: var(--hue-neutral);
+    padding: 5px 10px;
+    color: white;
+    outline: none;
+    background-color: rgb(74, 16, 182);
 }
 
-:button:hover{
-    cursor: pointer;
+button:hover{
     background-color: rgb(209, 4, 250);
     cursor: pointer;
-
 }
-.button:focus{
-    outline: 0em;
+button:focus{
+    outline: 1em;
 }
-
 
 :root{
-    --hue-neutral: 200;
+    --hue-neutral: 3;
     --hue-wrong: 0;
     --hue-correct: 145;
 }
 
 body.correct {
     --hue: var(--hue-correct);
-    color: green;
-    background-color: green;
+    color: rgb(0, 240, 0);
+    background-color: rgb(14, 252, 14);
 }
 
 body.wrong {
@@ -123,8 +130,14 @@ body.wrong {
     padding: 10px 20px;
    font-weight: bold;
     font-size: 1.5rem;  
-    background-color: rgb(32, 106, 204);
+    background-color: rgb(32, 204, 190);
     color: white;
+}
+#startbtn {
+    animation-duration: 8s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+  
 }
 
 .controls {
@@ -136,24 +149,34 @@ body.wrong {
     display: none;
 }
 
-
-  p
-{
+  p{
    align-items: center;
   justify-content: center;
+  color: white;
 }
 button{
     --hue: var(--hue-neutral);
     border: 1pz solid hsl(--hue, 100%, 30%);
     border-radius: 5px;
     background-color: hsl(--hue) 100%, 30%;
-    padding: 5px 10px;
-    color: black;
+    padding: 10px 15px;
+    color: white;
     outline: none;
-}
+    background-color: rgb(32, 204, 190);
+    font-weight: bold;
+    font-size: 15px;
+ }
+
 
 .controls{
     display: flex;
     justify-content: center;
     align-items: center;
+} 
+p#question {
+    color: rgb(72, 137, 197);
+    font-size: x-large;
+    font-weight: bold;
+    align-items: center;
+    text-align: center;
 }
