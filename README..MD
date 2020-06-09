@@ -1,8 +1,11 @@
-##  <button id="btn0" class="btn"><span id="choice0"></span></button>
-    <button id="btn1" class="btn"><span id="choice1"></span></button>
-    <button id="btn2" class="btn"><span id="choice2"></span></button>
-    <button id="btn3" class="btn"><span id="choice3"></span></button>
+### Quiz Instructions:
+- Click start button to begin. 
+- Once questions have appeared. Select what you believe is the correct answer.
+-Green = Correct, Red = Wrong.. 
+- Then select next button to move to the next question.
+- Repeat until all questions are answered.
 
 
-
-May came in use
+## Features I plan to add on sound effects for clicking answers. A timer to show how long the quiz took. 
+##  After 6 week of intesive learning at the Tech Talent Accelerator programme lead by Generation.
+## For my final project I wanted to challenge myself so I decided to create a quiz using mainly javascript. I have proven to myself that I can do anything I put my mind to. 
