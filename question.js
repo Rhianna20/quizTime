@@ -6,6 +6,7 @@ const nextButton = document.getElementById('nextbtn');
 const button = document.getElementById('button');
 const answer = document.getElementById('answer');
 
+
 let shuffleQuestions, questionIndex;
 
 
@@ -26,7 +27,7 @@ function startQuiz()
     nextUp()
  }
     answerBlock.addEventListener('click', () => {
-    question.innerHTML = 'NEXT!'
+    question.innerHTML = 'Answer Selected, NEXT!'
 
 })
     answerBlock.addEventListener('click', selectAnswer);

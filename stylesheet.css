@@ -133,12 +133,7 @@ body.wrong {
     background-color: rgb(32, 204, 190);
     color: white;
 }
-#startbtn {
-    animation-duration: 8s;
-    animation-name: slidein;
-    animation-iteration-count: infinite;
-  
-}
+
 
 .controls {
     display: flex;
