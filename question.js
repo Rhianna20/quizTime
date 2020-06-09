@@ -109,7 +109,7 @@ function endOfQuiz(shuffleQuestions){
 }
 
 
-var questions = [
+const questions = [
     {question: 'What is Javascript used for?', answer: [
         {text: 'To style Web Page', correct: false},
         {text: 'frontend development framework for creting responsive web design', correct: false},
