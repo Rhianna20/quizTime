@@ -77,11 +77,7 @@ resetit(button, button.dataset.correct)
 if (shuffleQuestions.length > questionIndex + 1){
 nextButton.classList.remove('hide')
 console.log('Answer Selected')
-} else { startButton.innerHTML = "Play Again!"
-        startButton.ClassList.remove('hide')
-       }
-
-
+} 
 
 function resetit (element, correct){
     clearup(element)
@@ -137,4 +133,4 @@ const questions = [
         ]
     
 
-}
+
