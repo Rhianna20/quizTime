@@ -13,11 +13,9 @@ let shuffleQuestions, questionIndex;
 
 startButton.addEventListener('click', startQuiz);
 
-
+// Start quiz //
 function startQuiz()
-
   {
-
     console.log('The quiz has begun!')
     startButton.classList.add('hide')
     nextButton.classList.add('hide')
@@ -36,14 +34,14 @@ function startQuiz()
     nextUp()
 })
 
-
+// Question switch //
   function nextUp()
 {
     restart() 
     revealQuestion(shuffleQuestions[questionIndex])  
     questionCElement.classList.remove('hide')
 }
-
+// restart once finish//
 function restart()
  {  
     clearup(document.body)
@@ -53,6 +51,7 @@ function restart()
    }
 }
 
+// show question //
 function revealQuestion(question){
  questionBlock.innerHTML = question.question
   question.answer.forEach(answer => {
@@ -67,6 +66,8 @@ function revealQuestion(question){
     }     );
 }
 
+
+// selecting answer //
 function selectAnswer(event){
 const buttonSelected = event.target
 const correct = buttonSelected.dataset.correct
@@ -77,11 +78,15 @@ resetit(button, button.dataset.correct)
 if (shuffleQuestions.length > questionIndex + 1){
 nextButton.classList.remove('hide')
 console.log('Answer Selected')
+questions.innerHTML =  questionIndex;
 } else {
     startButton.innerHTML = "Play Again!"
     startButton.classList.remove('hide')
 }
 }
+
+// Add CSS for answer // 
+
 function resetit (element, correct){
         clearup(element)
     if (correct){
@@ -91,16 +96,14 @@ function resetit (element, correct){
         element.classList.add('wrong')
     }
 }
-
+  //remove CSS //
 function clearup(element){
     element.classList.remove('correct')
     element.classList.remove('wrong')
 }
 
 
-
-
-
+// question array //
 
 var questions = [
     {question: 'What is Javascript used for?', answer: [
